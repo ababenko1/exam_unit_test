@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    app:startDestination="@id/repoListFragment">
+
+    <fragment
+        android:id="@+id/repoListFragment"
+        android:name="com.example.testapplication.presentation.ui.list.RepoListFragment"
+        android:label="Repositories">
+
+        <action
+            android:id="@+id/showRepoDetails"
+            app:destination="@id/repoDetailsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/repoDetailsFragment"
+        android:name="com.example.testapplication.presentation.ui.detail.RepoDetailsFragment"
+        android:label="Repo Details">
+        <argument
+            android:name="repoId"
+            app:argType="integer" />
+    </fragment>
+
+</navigation>
